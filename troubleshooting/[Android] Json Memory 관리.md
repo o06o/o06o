@@ -18,8 +18,8 @@
    - 100MB JSON 파일이 **전체 메모리를 차지**하며 **GC가 메모리 회수에 실패**.  
   
 2. **메모리에 적재된 내용을 `JSONObject`로 변환 후 사용으로 전체 JSON 파일을 메모리에 한번 더 적재**  
-   - 100MB JSON 파일이 **전체 메모리를 차지**하며 **GC가 메모리 회수에 실패**.  
-   - **중첩된 JSON 구조로 인해 실제 메모리 사용량은 매우 증가**.  
+   - 100MB JSON 파일이 전체 메모리를 차지하며 GC가 메모리 회수에 실패.  
+   - 중첩된 JSON 구조로 인해 실제 메모리 사용량은 매우 증가.  
 
 3. **메모리 누수 가능성**
    - 복원 과정에서 파일 내용과 JSONObject가 메모리에 유지 되어 메모리 부족 현상이 나타남.
@@ -52,9 +52,9 @@ private suspend fun processJson(reader: Reader) {
 ```
 
 #### **2️⃣ 메모리 누수 방지 (`mutableMapOf`와 `WeakReference`)**
-- **`JSONArray` 대신 `Map<String, Any?>` 구조**로 변환해 **더 가벼운 메모리 사용**.  
-- **중첩된 JSON 데이터**도 **재귀적으로 `Map`에 변환**해 메모리 최적화.
-- **중첩된 데이터 구조**에 **`WeakReference`**를 사용해 **GC가 필요할 때 메모리 해제**.
+- `JSONArray` 대신 `Map<String, Any?>` 구조로 변환해 더 가벼운 메모리 사용.  
+- 중첩된 JSON 데이터도 재귀적으로 `Map`에 변환해 메모리 최적화.
+- 중첩된 데이터 구조**에 `WeakReference`를 사용해 GC가 필요할 때 메모리 해제.
 
 ```kotlin
 private suspend fun processAnnotationsArray(reader: JsonReader) {
@@ -69,8 +69,8 @@ private suspend fun processAnnotationsArray(reader: JsonReader) {
 ```
 
 #### **3️⃣ Coroutine 취소 관리 (`ensureActive` + Flow 상태 관리)**
-- ViewModel에서 **취소 버튼으로 `CoroutineScope` 전체를 안전하게 취소**.  
-- **`ensureActive()`로 취소 신호를 빠르게 감지.
+- ViewModel에서 취소 버튼으로 `CoroutineScope` 전체를 안전하게 취소.  
+- `ensureActive()`로 취소 신호를 빠르게 감지.
 
 ---
 
@@ -106,9 +106,9 @@ private suspend fun processJson(reader: Reader) {
 ---
 
 ### **📚 교훈 및 개선사항**
-- **`JSONObject`는 작은 데이터에 적합**, **대규모 데이터는 스트리밍 방식 사용**이 필수.  
-- **`JSONArray` 대신 `Map` 사용**으로 메모리 효율성 증가.  
-- **`WeakReference` 사용으로 메모리 누수 방지**.
+- `JSONObject`는 작은 데이터에 적합, 대규모 데이터는 스트리밍 방식 사용이 필수.  
+- `JSONArray` 대신 `Map` 사용으로 메모리 효율성 증가.  
+- `WeakReference` 사용으로 메모리 누수 방지.
 
 
 ---
