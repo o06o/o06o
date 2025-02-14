@@ -1,7 +1,3 @@
-<a href="https://github.com/devxb/gitanimals">
-  <img src="https://render.gitanimals.org/farms/{o06o}"/>
-</a>
-
 # 📚 기술 문서 레포지토리
 
 이 레포지토리는 **트러블 슈팅(troubleshooting)**과 **재사용 가능한 기술 지식(knowledge)**을 문서화합니다.
@@ -39,3 +35,7 @@
 
 ## **문의**
 질문이나 제안 사항이 있으시면 [o06.develop@gmail.com](mailto:o06.develop@gmail.com)으로 연락해 주세요.
+
+<a href="https://github.com/devxb/gitanimals">
+  <img src="https://render.gitanimals.org/farms/{o06o}"/>
+</a>
