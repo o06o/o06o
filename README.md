@@ -22,12 +22,15 @@ Kotlin과 Jetpack Compose를 중심으로 사용자가 겪는 실패를 복구 �
 - STOMP 연결 실패, 응답 timeout과 재연결 중 중복 응답 처리
 - 고빈도 Compose state 분리와 draw/layout 단계 최적화
 - Feature → Domain → Data 의존 방향과 architecture lint
-- GitHub Actions 검증 결과를 Jenkins 배포 gate와 연결
+- `dev`·`release/**` 검증 → Slack 승인 → Jenkins의 정확한 commit 배포
+- SDK 독립 이벤트 계약과 DEV/PROD를 분리한 Amplitude 제품 분석
 
 빠른 리뷰:
 [타이머 코드](https://github.com/o06o/sollang-android-engineering/blob/main/src/main/kotlin/dev/o06o/sollang/timer/SleepTimerEngine.kt) ·
 [회귀 테스트](https://github.com/o06o/sollang-android-engineering/blob/main/src/test/kotlin/dev/o06o/sollang/timer/SleepTimerEngineTest.kt) ·
 [Compose 성능 사례](https://github.com/o06o/sollang-android-engineering/blob/main/docs/case-studies/compose-runtime-performance.md) ·
+[Git·CI/CD 정책](https://github.com/o06o/sollang-android-engineering/blob/main/docs/case-studies/git-branch-and-cicd.md) ·
+[Amplitude 제품 분석](https://github.com/o06o/sollang-android-engineering/blob/main/docs/case-studies/product-analytics-with-amplitude.md) ·
 [case studies](https://github.com/o06o/sollang-android-engineering/tree/main/docs/case-studies)
 
 ## AI 활용 크로스플랫폼 개발
