@@ -1,5 +1,7 @@
 # o06 | Android & Flutter 개발자
 
+> **현재** — 감정 대화와 수면 사운드 앱 **Sollang**의 Android 앱을 설계부터 배포 자동화까지 맡아 개발하고 있습니다. (2026.03~, 스토어 출시 심사 중)
+
 5년간 모바일 제품의 기능 개발부터 아키텍처, 운영 안정성, 배포 자동화까지 다뤄 왔습니다.
 Kotlin과 Jetpack Compose를 중심으로 사용자가 겪는 실패를 복구 가능한 상태로 만들고,
 팀의 설계 기준을 코드와 자동 검증으로 남기는 일에 관심이 많습니다.
@@ -28,10 +30,8 @@ Kotlin과 Jetpack Compose를 중심으로 사용자가 겪는 실패를 복구 �
 빠른 리뷰:
 [타이머 코드](https://github.com/o06o/sollang-android-engineering/blob/main/src/main/kotlin/dev/o06o/sollang/timer/SleepTimerEngine.kt) ·
 [회귀 테스트](https://github.com/o06o/sollang-android-engineering/blob/main/src/test/kotlin/dev/o06o/sollang/timer/SleepTimerEngineTest.kt) ·
-[Compose 성능 사례](https://github.com/o06o/sollang-android-engineering/blob/main/docs/case-studies/compose-runtime-performance.md) ·
-[Git·CI/CD 정책](https://github.com/o06o/sollang-android-engineering/blob/main/docs/case-studies/git-branch-and-cicd.md) ·
-[Amplitude 제품 분석](https://github.com/o06o/sollang-android-engineering/blob/main/docs/case-studies/product-analytics-with-amplitude.md) ·
-[case studies](https://github.com/o06o/sollang-android-engineering/tree/main/docs/case-studies)
+[Compose 성능 사례](https://github.com/o06o/sollang-android-engineering/blob/main/docs/case-studies/compose-runtime-performance.md)
+— 나머지는 [case studies](https://github.com/o06o/sollang-android-engineering/tree/main/docs/case-studies)
 
 ## AI 활용 크로스플랫폼 개발
 
