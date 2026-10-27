@@ -1,10 +1,10 @@
-# o06o | Android & Flutter Developer
+# o06 | Android & Flutter 개발자
 
 5년간 모바일 제품의 기능 개발부터 아키텍처, 운영 안정성, 배포 자동화까지 다뤄 왔습니다.
 Kotlin과 Jetpack Compose를 중심으로 사용자가 겪는 실패를 복구 가능한 상태로 만들고,
 팀의 설계 기준을 코드와 자동 검증으로 남기는 일에 관심이 많습니다.
 
-## Focus
+## 전문 분야
 
 - **Android** — Kotlin, Jetpack Compose, Coroutines/Flow, Hilt, Room, Media3
 - **Flutter** — Dart, Riverpod, go_router, Drift
@@ -12,7 +12,7 @@ Kotlin과 Jetpack Compose를 중심으로 사용자가 겪는 실패를 복구 �
 - **Quality** — unit/UI test, architecture lint, GitHub Actions, Jenkins
 - **Operations** — Crashlytics, Amplitude, WebSocket recovery, background playback
 
-## Featured engineering work
+## 대표 엔지니어링 작업
 
 ### [Sollang Android Engineering](https://github.com/o06o/sollang-android-engineering)
 
@@ -20,15 +20,17 @@ Kotlin과 Jetpack Compose를 중심으로 사용자가 겪는 실패를 복구 �
 
 - process와 화면 lifecycle에 독립적인 Media3 백그라운드 재생·수면 타이머
 - STOMP 연결 실패, 응답 timeout과 재연결 중 중복 응답 처리
+- 고빈도 Compose state 분리와 draw/layout 단계 최적화
 - Feature → Domain → Data 의존 방향과 architecture lint
 - GitHub Actions 검증 결과를 Jenkins 배포 gate와 연결
 
 빠른 리뷰:
 [타이머 코드](https://github.com/o06o/sollang-android-engineering/blob/main/src/main/kotlin/dev/o06o/sollang/timer/SleepTimerEngine.kt) ·
 [회귀 테스트](https://github.com/o06o/sollang-android-engineering/blob/main/src/test/kotlin/dev/o06o/sollang/timer/SleepTimerEngineTest.kt) ·
+[Compose 성능 사례](https://github.com/o06o/sollang-android-engineering/blob/main/docs/case-studies/compose-runtime-performance.md) ·
 [case studies](https://github.com/o06o/sollang-android-engineering/tree/main/docs/case-studies)
 
-## AI-assisted cross-platform development
+## AI 활용 크로스플랫폼 개발
 
 기존 Android의 제품 계약을 SwiftUI·Swift Concurrency·Tuist 기반 iOS 앱으로 옮기면서 AI를 코드 생성기가 아니라
 계약 탐색, 플랫폼 차이 분석, 테스트와 문서 동기화 도구로 사용했습니다.
@@ -37,10 +39,11 @@ Kotlin과 Jetpack Compose를 중심으로 사용자가 겪는 실패를 복구 �
 
 → [Android에서 iOS로: AI를 활용한 개발 시스템](https://github.com/o06o/sollang-android-engineering/blob/main/docs/ai-assisted-ios-development.md)
 
-## Technical writing
+## 기술 기록
 
 - [대용량 JSON 처리 중 Android OOM을 스트리밍 방식으로 바꾼 기록](troubleshooting/%5BAndroid%5D%20Json%20Memory%20%EA%B4%80%EB%A6%AC.md)
+- [Compose 재구성·렌더링 성능 트러블슈팅](https://github.com/o06o/sollang-android-engineering/blob/main/docs/case-studies/compose-runtime-performance.md)
 
-## Contact
+## 연락처
 
 - Email: `o06.develop@gmail.com`
