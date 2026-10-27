@@ -1,41 +1,46 @@
-# 📚 기술 문서 레포지토리
+# o06o | Android & Flutter Developer
 
-이 레포지토리는 **트러블 슈팅(troubleshooting)**과 **재사용 가능한 기술 지식(knowledge)**을 문서화합니다.
+5년간 모바일 제품의 기능 개발부터 아키텍처, 운영 안정성, 배포 자동화까지 다뤄 왔습니다.
+Kotlin과 Jetpack Compose를 중심으로 사용자가 겪는 실패를 복구 가능한 상태로 만들고,
+팀의 설계 기준을 코드와 자동 검증으로 남기는 일에 관심이 많습니다.
 
----
+## Focus
 
-## **파일 구조**
-```
-.
-├── troubleshooting/   # 트러블 슈팅 사례 정리
-│   └── [Android] Json Memory 관리.md
-└── knowledge/         # 재사용 가능한 기술 지식 정리
-    └── Common Patterns.md
-```
+- **Android** — Kotlin, Jetpack Compose, Coroutines/Flow, Hilt, Room, Media3
+- **Flutter** — Dart, Riverpod, go_router, Drift
+- **Architecture** — state/action 경계, multi-module, Domain/Data API, dependency injection
+- **Quality** — unit/UI test, architecture lint, GitHub Actions, Jenkins
+- **Operations** — Crashlytics, Amplitude, WebSocket recovery, background playback
 
----
+## Featured engineering work
 
-## **문서 소개**
+### [Sollang Android Engineering](https://github.com/o06o/sollang-android-engineering)
 
-### **1. troubleshooting**
-- **트러블 슈팅 사례를 정리한 디렉토리**입니다.  
-- 문제 정의, 원인 분석, 해결 과정, 최종 코드 등을 기록합니다.  
+감정 대화와 수면 사운드를 제공하는 모바일 제품에서 다룬 설계 문제를 공개 가능한 코드와 case study로 정리했습니다.
 
-### **2. knowledge**
-- **개발 과정에서 알게 된 다양한 기술 지식과 경험을 정리**하는 디렉토리입니다.  
-- 기술적 개념, 노하우, 유용한 코드 스니펫 등을 기록합니다.  
+- process와 화면 lifecycle에 독립적인 Media3 백그라운드 재생·수면 타이머
+- STOMP 연결 실패, 응답 timeout과 재연결 중 중복 응답 처리
+- Feature → Domain → Data 의존 방향과 architecture lint
+- GitHub Actions 검증 결과를 Jenkins 배포 gate와 연결
 
----
+빠른 리뷰:
+[타이머 코드](https://github.com/o06o/sollang-android-engineering/blob/main/src/main/kotlin/dev/o06o/sollang/timer/SleepTimerEngine.kt) ·
+[회귀 테스트](https://github.com/o06o/sollang-android-engineering/blob/main/src/test/kotlin/dev/o06o/sollang/timer/SleepTimerEngineTest.kt) ·
+[case studies](https://github.com/o06o/sollang-android-engineering/tree/main/docs/case-studies)
 
-## **기여 가이드**
-1. **트러블 슈팅 사례**는 `troubleshooting/`에 기록합니다.  
-2. **재사용 가능한 코드 및 지식**은 `knowledge/`에 추가합니다.
+## AI-assisted cross-platform development
 
----
+기존 Android의 제품 계약을 SwiftUI·Swift Concurrency·Tuist 기반 iOS 앱으로 옮기면서 AI를 코드 생성기가 아니라
+계약 탐색, 플랫폼 차이 분석, 테스트와 문서 동기화 도구로 사용했습니다.
 
-## **문의**
-질문이나 제안 사항이 있으시면 [o06.develop@gmail.com](mailto:o06.develop@gmail.com)으로 연락해 주세요.
+제품 판단과 공개 API 경계는 사람이 결정하고, 확인되지 않은 동작은 추측해 구현하지 않는 방식을 유지했습니다.
 
-<a href="https://github.com/devxb/gitanimals">
-  <img src="https://render.gitanimals.org/farms/{o06o}"/>
-</a>
+→ [Android에서 iOS로: AI를 활용한 개발 시스템](https://github.com/o06o/sollang-android-engineering/blob/main/docs/ai-assisted-ios-development.md)
+
+## Technical writing
+
+- [대용량 JSON 처리 중 Android OOM을 스트리밍 방식으로 바꾼 기록](troubleshooting/%5BAndroid%5D%20Json%20Memory%20%EA%B4%80%EB%A6%AC.md)
+
+## Contact
+
+- Email: `o06.develop@gmail.com`
